@@ -1,0 +1,173 @@
+/* General Body and Layout */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@300;400;600&display=swap');
+
+body {
+  background-color: #121212; /* Dark background for the site */
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url('image.png'); /* Add a relevant background image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header Section */
+/* Top Songs Heading Styling */
+.top-songs-heading {
+  text-align: center;
+  font-size: 3.5em;
+  color: #9b7cd6; /* Light purple for title */
+  margin-top: 80px;
+  padding: 20px;
+  text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7); /* Enhanced text shadow */
+  letter-spacing: 3px;
+  animation: fadeIn 2s ease-in-out, glow 2s infinite alternate; /* Add fade-in animation */
+}
+
+/* Glow Animation for Heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 4px 4px 20px rgba(155, 124, 214, 0.8);
+  }
+  to {
+    text-shadow: 4px 4px 30px rgba(155, 124, 214, 1);
+  }
+}
+
+
+/* Quote or Slogan Section */
+.quote {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  color: #d1c1d1;
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Error Message */
+div {
+  color: rgb(248, 242, 245);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Song List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increase the min width for grid items */
+  gap: 20px; /* Spacing between grid items */
+  padding: 20px;
+}
+
+/* Song Card Styling */
+ul li {
+  background-color: #1e1e1e; /* Dark grey background for each song */
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Ensure the layout uses flexbox for responsive layout */
+  flex-direction: column; /* Stack items vertically for better layout */
+  align-items: center; /* Center content inside each item */
+  height: 400px; /* Increased height for better visibility */
+}
+
+ul li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Song Name and Artist Styling */
+ul li a {
+  text-decoration: none;
+  color: #9b7cd6; /* Light purple for links */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+ul li a:hover {
+  color: #7f5fd2; /* Slightly darker purple when hovered */
+  text-decoration: underline;
+}
+
+/* Album Artwork */
+ul li img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Genre and Album Name */
+ul li div p {
+  margin: 0; /* Remove default margin from the genre and album details */
+  color: #d1c1d1;
+  font-size: 0.9em;
+}
+
+/* Footer for Navigation and Login */
+footer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  color: #9b7cd6;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #9b7cd6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #7f5fd2;
+  text-decoration: underline;
+}
+
+/* Button Styles (e.g. admin button) */
+button {
+  background-color: #9b7cd6; /* Light purple for buttons */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f5fd2; /* Darker purple when hovered */
+}
+
+ul li iframe {
+  width: 100%; /* Full width of the container */
+  height: 250px; /* Desired height for the iframe */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
